@@ -9,7 +9,7 @@ Steps:
 
 1. Update `root` or `rootName` variable in each script to the name of the CLI tool (eg. docker)
 
-2. Create a folder named `root`
+2. Create a folder with the same name as the CLI tool / `root`
 
 
 3. `node scraper.js`
