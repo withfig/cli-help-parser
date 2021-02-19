@@ -1,0 +1,14 @@
+Use containers to build and deploy Heroku apps
+
+USAGE
+  $ heroku container
+
+COMMANDS
+  container:login    log in to Heroku Container Registry
+  container:logout   log out from Heroku Container Registry
+  container:pull     pulls an image from an app's process type
+  container:push     builds, then pushes Docker images to deploy your Heroku app
+  container:release  Releases previously pushed Docker images to your Heroku app
+  container:rm       remove the process type from your app
+  container:run      builds, then runs the docker image locally
+

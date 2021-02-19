@@ -1,0 +1,15 @@
+list who has access to an app
+
+USAGE
+  $ heroku access
+
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -r, --remote=remote  git remote of app to use
+  --json               output in json format
+
+COMMANDS
+  access:add     add new users to your app
+  access:remove  remove users from a team app
+  access:update  update existing collaborators on an team app
+

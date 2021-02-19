@@ -85,16 +85,15 @@ let processOptionText = (text) => {
 	return options
 }
 
-let root = "docker";
-(async ()=> {
-	let directory = `./${root}/`
+async function parse(root) {
+	let directory = `./${root}/scrapedFiles`
+	console.log("parsing")
 	let files = (await exec('ls ' + directory)).stdout.split('\n').slice(0, -1)//.slice(0,5)
 	let master = []
 	for (file of files) {
 		console.log(file)
 		let components = file.split('.').slice(0,-1)
 	
-
 		try {
 			let text = await fs.readFile(directory + file, 'utf8')
 			let name = components.slice(-1).pop()
@@ -106,9 +105,11 @@ let root = "docker";
 			console.log(e)
 		}
 	}
-	fs.writeFile(`./${root}-master.json`, JSON.stringify(master, null, 4))
-})();
+	fs.writeFile(`./${root}/${root}-master.json`, JSON.stringify(master, null, 4))
+};
 
 
 //(NAME)$\n(.*?)(DESCRIPTION)$\n(.*)(SYNOPSIS)$\n(.*)(OPTIONS)$\n(.*)((OUTPUT)$\n(.*))?((AVAILABLE SERVICES)$\n(.*))?((SEE ALSO)$\n(.*))
 //^([A-Z][A-Z\s]+)$(.*?)(?=^[A-Z]|(.*)$)
+
+module.exports = parse

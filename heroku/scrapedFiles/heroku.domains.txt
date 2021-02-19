@@ -1,0 +1,36 @@
+list domains for an app
+
+USAGE
+  $ heroku domains
+
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -h, --help           show CLI help
+  -j, --json           output in json format
+  -r, --remote=remote  git remote of app to use
+  -x, --extended       show extra columns
+  --columns=columns    only show provided columns (comma-separated)
+  --csv                output is csv format
+  --filter=filter      filter property by partial string matching, ex: name=foo
+  --no-header          hide table header from output
+  --sort=sort          property to sort by (prepend '-' for descending)
+
+EXAMPLES
+  $ heroku domains
+  === example Heroku Domain
+  example.herokuapp.com
+
+  === example Custom Domains
+  Domain Name      DNS Record Type  DNS Target
+  www.example.com  CNAME            www.example.herokudns.com
+
+  $ heroku domains --filter 'Domain Name=www.example.com'
+
+COMMANDS
+  domains:add     add a domain to an app
+  domains:clear   remove all domains from an app
+  domains:info    show detailed information for a domain on an app
+  domains:remove  remove a domain from an app
+  domains:update  update a domain to use a different SSL certificate on an app
+  domains:wait    wait for domain to be active for an app
+

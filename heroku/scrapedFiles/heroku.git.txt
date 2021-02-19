@@ -1,0 +1,10 @@
+manage local git repository for app
+
+USAGE
+  $ heroku git:COMMAND
+
+COMMANDS
+  git:clone   clones a heroku app to your local machine at DIRECTORY (defaults
+              to app name)
+  git:remote  adds a git remote to an app repo
+

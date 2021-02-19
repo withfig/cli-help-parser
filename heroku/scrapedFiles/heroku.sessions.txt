@@ -1,0 +1,11 @@
+list your OAuth sessions
+
+USAGE
+  $ heroku sessions
+
+OPTIONS
+  -j, --json  output in json format
+
+COMMANDS
+  sessions:destroy  delete (logout) OAuth session by ID
+

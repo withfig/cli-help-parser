@@ -1,0 +1,20 @@
+list webhooks on an app
+
+USAGE
+  $ heroku webhooks
+
+OPTIONS
+  -a, --app=app        app to run command against
+  -r, --remote=remote  git remote of app to use
+
+EXAMPLE
+  $ heroku webhooks
+
+COMMANDS
+  webhooks:add         add a webhook to an app
+  webhooks:deliveries  list webhook deliveries on an app
+  webhooks:events      list webhook events on an app
+  webhooks:info        info for a webhook on an app
+  webhooks:remove      removes a webhook from an app
+  webhooks:update      updates a webhook in an app
+

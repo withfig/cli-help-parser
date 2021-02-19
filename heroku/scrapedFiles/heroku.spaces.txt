@@ -1,0 +1,23 @@
+list available spaces
+
+USAGE
+  $ heroku spaces
+
+OPTIONS
+  -t, --team=team  team to use
+  --json           output in json format
+
+COMMANDS
+  spaces:create    create a new space
+  spaces:destroy   destroy a space
+  spaces:info      show info about a space
+  spaces:peering   display the information necessary to initiate a peering
+                   connection
+  spaces:peerings  list peering connections for a space
+  spaces:ps        list dynos for a space
+  spaces:rename    renames a space
+  spaces:topology  show space topology
+  spaces:transfer  transfer a space to another team
+  spaces:vpn       display the configuration information for VPN
+  spaces:wait      wait for a space to be created
+

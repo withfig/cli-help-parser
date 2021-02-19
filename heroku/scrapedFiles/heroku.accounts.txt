@@ -1,0 +1,9 @@
+USAGE
+  $ heroku accounts
+
+COMMANDS
+  accounts:add
+  accounts:current
+  accounts:remove
+  accounts:set
+

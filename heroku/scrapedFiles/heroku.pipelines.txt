@@ -1,0 +1,30 @@
+list pipelines you have access to
+
+USAGE
+  $ heroku pipelines
+
+OPTIONS
+  --json  output in json format
+
+EXAMPLE
+  $ heroku pipelines
+
+COMMANDS
+  pipelines:add       add this app to a pipeline
+  pipelines:connect   connect a github repo to an existing pipeline
+  pipelines:create    create a new pipeline
+  pipelines:destroy   destroy a pipeline
+  pipelines:diff      compares the latest release of this app to its downstream
+                      app(s)
+  pipelines:info      show list of apps in a pipeline
+  pipelines:open      open a pipeline in dashboard
+  pipelines:promote   promote the latest release of this app to its downstream
+                      app(s)
+  pipelines:remove    remove this app from its pipeline
+  pipelines:rename    rename a pipeline
+  pipelines:setup     bootstrap a new pipeline with common settings and create a
+                      production and staging app (requires a fully formed
+                      app.json in the repo)
+  pipelines:transfer  transfer ownership of a pipeline
+  pipelines:update    update the app's stage in a pipeline
+

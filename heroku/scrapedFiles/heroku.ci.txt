@@ -1,0 +1,28 @@
+display the most recent CI runs for the given pipeline
+
+USAGE
+  $ heroku ci
+
+OPTIONS
+  -a, --app=app            app name
+  -p, --pipeline=pipeline  name of pipeline
+  --json                   output in json format
+  --watch                  keep running and watch for new and update tests
+
+EXAMPLE
+  $ heroku ci --app murmuring-headland-14719
+
+
+COMMANDS
+  ci:config            display CI config vars
+  ci:debug             opens an interactive test debugging session with the
+                       contents of the current directory
+  ci:info              show the status of a specific test run
+  ci:last              looks for the most recent run and returns the output of
+                       that run
+  ci:migrate-manifest  app-ci.json is deprecated. Run this command to migrate to
+                       app.json with an environments key.
+  ci:open              open the Dashboard version of Heroku CI
+  ci:rerun             rerun tests against current directory
+  ci:run               run tests against current directory
+

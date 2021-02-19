@@ -1,0 +1,12 @@
+check 2fa status
+
+USAGE
+  $ heroku auth:COMMAND
+
+COMMANDS
+  auth:2fa     check 2fa status
+  auth:login   login with your Heroku credentials
+  auth:logout  clears local login credentials and invalidates API session
+  auth:token   outputs current CLI authentication token.
+  auth:whoami  display the current logged in user
+

@@ -1,0 +1,21 @@
+gets information about redis
+
+USAGE
+  $ heroku redis [DATABASE]
+
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -r, --remote=remote  git remote of app to use
+
+COMMANDS
+  redis:cli                     opens a redis prompt
+  redis:credentials             display credentials information
+  redis:info                    gets information about redis
+  redis:keyspace-notifications  set the keyspace notifications configuration
+  redis:maintenance             manage maintenance windows
+  redis:maxmemory               set the key eviction policy
+  redis:promote                 sets DATABASE as your REDIS_URL
+  redis:timeout                 set the number of seconds to wait before killing
+                                idle connections
+  redis:wait                    wait for Redis instance to be available
+

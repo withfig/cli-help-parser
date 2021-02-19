@@ -1,0 +1,17 @@
+display the config vars for an app
+
+USAGE
+  $ heroku config
+
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -j, --json           output config vars in json format
+  -r, --remote=remote  git remote of app to use
+  -s, --shell          output config vars in shell format
+
+COMMANDS
+  config:edit   interactively edit config vars
+  config:get    display a single config value for an app
+  config:set    set one or more config vars
+  config:unset  unset one or more config vars
+

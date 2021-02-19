@@ -1,13 +1,13 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const fs = require('fs').promises;
+const fs2 = require('fs');
 
+let root = "heroku"
 
-let root = "docker"
-
-let exportHelp = async (args) => { 
+let exportHelp = async (args) => {
 	let help = `${args.join(' ')} --help`
-	let path = `./${root}/${args.join('.')}.txt`
+	let path = `./${root}/scrapedFiles/${args.join('.')}.txt`
 	// help([root])
 	await exec(help + ' > ' + path);
 
@@ -15,7 +15,6 @@ let exportHelp = async (args) => {
 }
 
 let parseHelp = async (path) => {
-
     const data = await fs.readFile(path, 'utf8');
     console.log(data)
     let normal = /^\s{4}([a-z][a-z-:]+)\s.*?\s+([A-Za-z\s\.\-',\/\:]*?)(?=$|\n\n)/gms
@@ -26,9 +25,7 @@ let parseHelp = async (path) => {
     	return {command, description}
     })
 
-    
     return commands
-
 }
 
 let processCommand = async(args, depth) => {
@@ -38,6 +35,17 @@ let processCommand = async(args, depth) => {
 		console.log("Hit max depth!")
 		return
 	}
+
+	// create directory if doesn't exist
+	if(!fs2.existsSync(`./${args[0]}`)) {
+		fs2.mkdirSync(`./${args[0]}`);
+	}
+
+	if(!fs2.existsSync(`./${args[0]}/scrapedFiles`)) {
+		fs2.mkdirSync(`./${args[0]}/scrapedFiles`);
+	}
+	
+	
 
 	let path = await exportHelp(args)
 	let commands = await parseHelp(path)
@@ -49,11 +57,12 @@ let processCommand = async(args, depth) => {
 		} catch (e) {
 			console.log(e)
 		}
-		
+
 	}
 	return commands
 }
 
-(async ()=> {
-	await processCommand([root], 2)
-})();
+processCommand([root], 2);
+
+
+module.exports = processCommand;

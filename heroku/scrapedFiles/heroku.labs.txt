@@ -1,0 +1,15 @@
+list experimental features
+
+USAGE
+  $ heroku labs
+
+OPTIONS
+  -a, --app=app        app to run command against
+  -r, --remote=remote  git remote of app to use
+  --json               display as json
+
+COMMANDS
+  labs:disable  disables an experimental feature
+  labs:enable   enables an experimental feature
+  labs:info     show feature info
+

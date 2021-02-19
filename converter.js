@@ -22,7 +22,6 @@ let convert = (command) => {
 		description: command.description,
 		subcommands: [],
 		options: options
-
 	}
 }
 
@@ -64,10 +63,8 @@ let walk = (tree, path, transaction) => {
 	return tree
 }
 
-let rootName = "docker";
-
-(async () => {
-	let path = `./${rootName}-master.json`
+async function runConversion(rootName) {
+	let path = `./${rootName}/${rootName}-master.json`
 	let master = {}
 	let data = await fs.readFile(path, 'utf-8')
 	let json = JSON.parse(data)
@@ -79,7 +76,6 @@ let rootName = "docker";
 	}
 
 	json.forEach(command => {
-		
 		root = walk(root, command.seq, (node) => {
 			delete command.seq
 			command.subcommands = node.subcommands
@@ -87,10 +83,9 @@ let rootName = "docker";
 		})
 	})
 
-	// console.log(Object.keys(services))
 	let out = "var completionSpec = " + util.inspect(root, {showHidden: false, depth: null, maxArrayLength: null})//+ JSON.stringify(root, null, 4)
-	fs.writeFile(`./${rootName}.js`, out)
-})();
+	fs.writeFile(`./${rootName}/${rootName}.js`, out);
+}
 
 // function stringify(obj_from_json) {
 //     if (typeof obj_from_json !== "object" || Array.isArray(obj_from_json)){
@@ -105,3 +100,5 @@ let rootName = "docker";
 //         .join(",");
 //     return `{${props}}`;
 // }
+
+module.exports = runConversion;

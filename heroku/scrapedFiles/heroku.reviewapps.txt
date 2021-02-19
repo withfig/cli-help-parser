@@ -1,0 +1,10 @@
+manage reviewapps in pipelines
+
+USAGE
+  $ heroku reviewapps:COMMAND
+
+COMMANDS
+  reviewapps:disable  disable review apps and/or settings on an existing
+                      pipeline
+  reviewapps:enable   enable review apps and/or settings on an existing pipeline
+

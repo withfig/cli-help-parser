@@ -1,0 +1,15 @@
+list your OAuth clients
+
+USAGE
+  $ heroku clients
+
+OPTIONS
+  -j, --json  output in json format
+
+COMMANDS
+  clients:create   create a new OAuth client
+  clients:destroy  delete client by ID
+  clients:info     show details of an oauth client
+  clients:rotate   rotate OAuth client secret
+  clients:update   update OAuth client
+

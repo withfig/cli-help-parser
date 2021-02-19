@@ -1,0 +1,1 @@
+var completionSpec = { name: 'heroku', description: '', subcommands: [] }

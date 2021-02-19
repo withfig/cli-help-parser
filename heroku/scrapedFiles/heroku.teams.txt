@@ -1,0 +1,11 @@
+list the teams that you are a member of
+
+USAGE
+  $ heroku teams
+
+OPTIONS
+  --json  output in json format
+
+DESCRIPTION
+  Use [36m[1mheroku members:*[22m[39m to manage team members.
+

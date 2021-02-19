@@ -1,0 +1,5 @@
+update the heroku CLI
+
+USAGE
+  $ heroku update [CHANNEL]
+

@@ -1,0 +1,17 @@
+list installed plugins
+
+USAGE
+  $ heroku plugins
+
+OPTIONS
+  --core  show core plugins
+
+EXAMPLE
+  $ heroku plugins
+
+COMMANDS
+  plugins:install    installs a plugin into the CLI
+  plugins:link       links a plugin into the CLI for development
+  plugins:uninstall  removes a plugin from the CLI
+  plugins:update     update installed plugins
+

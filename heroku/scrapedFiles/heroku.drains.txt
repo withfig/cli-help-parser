@@ -1,0 +1,14 @@
+display the log drains of an app
+
+USAGE
+  $ heroku drains
+
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -r, --remote=remote  git remote of app to use
+  --json               output in json format
+
+COMMANDS
+  drains:add     adds a log drain to an app
+  drains:remove  removes a log drain from an app
+

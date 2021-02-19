@@ -1,0 +1,8 @@
+display current status of the Heroku platform
+
+USAGE
+  $ heroku status
+
+OPTIONS
+  --json  output in json format
+

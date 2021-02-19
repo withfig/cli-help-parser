@@ -1,0 +1,12 @@
+list the teams that you are a member of
+
+USAGE
+  $ heroku orgs
+
+OPTIONS
+  --enterprise  filter by enterprise teams
+  --json        output in json format
+
+COMMANDS
+  orgs:open  open the team interface in a browser window
+

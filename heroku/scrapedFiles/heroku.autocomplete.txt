@@ -1,0 +1,17 @@
+display autocomplete installation instructions
+
+USAGE
+  $ heroku autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
+
+OPTIONS
+  -r, --refresh-cache  refresh cache only (ignores displaying instructions)
+
+EXAMPLES
+  $ heroku autocomplete
+  $ heroku autocomplete bash
+  $ heroku autocomplete zsh
+  $ heroku autocomplete --refresh-cache
+
